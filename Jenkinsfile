@@ -20,9 +20,9 @@ pipeline {
 
             steps {
 
-                echo " Installing dependencies..."
+                echo 'Installing dependencies...'
 
-                sh 'pip install -r requirements.txt'
+                sh 'python3 -m pip install -r requirements.txt'
 
             }
 
@@ -32,9 +32,9 @@ pipeline {
 
             steps {
 
-                echo "Running tests..."    
+                echo 'Running tests...'
 
-                sh 'pytest'
+                sh 'python3 -m pytest'
 
             }
 
@@ -44,9 +44,9 @@ pipeline {
 
             steps {
 
-                echo "Building the application..."
+                echo 'Building the application...'
 
-                sh 'python app.py'
+                sh 'python3 app.py'
 
             }
 
@@ -55,7 +55,3 @@ pipeline {
     }
 
 }
-
-
-
-
